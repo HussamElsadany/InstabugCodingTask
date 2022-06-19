@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		24AA939F25AF0DA4007588C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA939E25AF0DA4007588C7 /* AppDelegate.swift */; };
 		24AA93A125AF0DA4007588C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA93A025AF0DA4007588C7 /* SceneDelegate.swift */; };
-		24AA93A325AF0DA4007588C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA93A225AF0DA4007588C7 /* ViewController.swift */; };
-		24AA93A625AF0DA4007588C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AA93A425AF0DA4007588C7 /* Main.storyboard */; };
 		24AA93A825AF0DA5007588C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AA93A725AF0DA5007588C7 /* Assets.xcassets */; };
 		24AA93AB25AF0DA5007588C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AA93A925AF0DA5007588C7 /* LaunchScreen.storyboard */; };
 		24AA93C125AF0F0D007588C7 /* InstabugNetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AA93B825AF0F0D007588C7 /* InstabugNetworkClient.framework */; };
@@ -19,6 +17,33 @@
 		24AA93CD25AF0F0D007588C7 /* InstabugNetworkClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AA93B825AF0F0D007588C7 /* InstabugNetworkClient.framework */; };
 		24AA93CE25AF0F0D007588C7 /* InstabugNetworkClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24AA93B825AF0F0D007588C7 /* InstabugNetworkClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24AA93D925AF0F24007588C7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AA93D825AF0F24007588C7 /* NetworkClient.swift */; };
+		DC1C3291285E58060013DAEC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C328F285E58060013DAEC /* UIView+Extensions.swift */; };
+		DC1C3292285E58060013DAEC /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C3290285E58060013DAEC /* UITableView+Extensions.swift */; };
+		DC1C329C285E58360013DAEC /* RecordSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C3296285E58350013DAEC /* RecordSceneConfigurator.swift */; };
+		DC1C329D285E58360013DAEC /* RecordScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C3297285E58350013DAEC /* RecordScenePresenter.swift */; };
+		DC1C329E285E58360013DAEC /* RecordSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C3298285E58350013DAEC /* RecordSceneInteractor.swift */; };
+		DC1C329F285E58360013DAEC /* RecordSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C3299285E58350013DAEC /* RecordSceneModels.swift */; };
+		DC1C32A0285E58360013DAEC /* RecordSceneWorkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C329A285E58350013DAEC /* RecordSceneWorkers.swift */; };
+		DC1C32A1285E58360013DAEC /* RecordSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C329B285E58360013DAEC /* RecordSceneRouter.swift */; };
+		DC1C32A5285E58400013DAEC /* RecordSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1C32A3285E58400013DAEC /* RecordSceneViewController.xib */; };
+		DC1C32A6285E58400013DAEC /* RecordSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32A4285E58400013DAEC /* RecordSceneViewController.swift */; };
+		DC1C32AA285E58520013DAEC /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32A8285E58520013DAEC /* RecordTableViewCell.swift */; };
+		DC1C32AB285E58520013DAEC /* RecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1C32A9285E58520013DAEC /* RecordTableViewCell.xib */; };
+		DC1C32B2285E58600013DAEC /* LandingSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32AC285E585F0013DAEC /* LandingSceneRouter.swift */; };
+		DC1C32B3285E58600013DAEC /* LandingScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32AD285E585F0013DAEC /* LandingScenePresenter.swift */; };
+		DC1C32B4285E58600013DAEC /* LandingSceneWorkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32AE285E58600013DAEC /* LandingSceneWorkers.swift */; };
+		DC1C32B5285E58600013DAEC /* LandingSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32AF285E58600013DAEC /* LandingSceneModels.swift */; };
+		DC1C32B6285E58600013DAEC /* LandingSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32B0285E58600013DAEC /* LandingSceneInteractor.swift */; };
+		DC1C32B7285E58600013DAEC /* LandingSceneConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32B1285E58600013DAEC /* LandingSceneConfigurator.swift */; };
+		DC1C32BB285E586B0013DAEC /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32B9285E586A0013DAEC /* LandingViewController.swift */; };
+		DC1C32BC285E586B0013DAEC /* LandingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1C32BA285E586B0013DAEC /* LandingViewController.xib */; };
+		DC1C32BF285E588D0013DAEC /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32BD285E588D0013DAEC /* DataStorage.swift */; };
+		DC1C32C0285E588D0013DAEC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32BE285E588D0013DAEC /* CoreDataStack.swift */; };
+		DC1C32C3285E58990013DAEC /* InstabugNetworkClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32C1285E58990013DAEC /* InstabugNetworkClient.xcdatamodeld */; };
+		DC1C32C5285E67770013DAEC /* InstabugNetworkClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32C4285E67770013DAEC /* InstabugNetworkClientMock.swift */; };
+		DC1C32C7285E67BE0013DAEC /* InstabugDataStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32C6285E67BE0013DAEC /* InstabugDataStorageTests.swift */; };
+		DC1C32CD285E7B560013DAEC /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32CC285E7B560013DAEC /* TestCoreDataStack.swift */; };
+		DC1C32CF285E89640013DAEC /* UIButon+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1C32CE285E89640013DAEC /* UIButon+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +88,6 @@
 		24AA939B25AF0DA4007588C7 /* InstabugInterview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstabugInterview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AA939E25AF0DA4007588C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AA93A025AF0DA4007588C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		24AA93A225AF0DA4007588C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		24AA93A525AF0DA4007588C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24AA93A725AF0DA5007588C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AA93AA25AF0DA5007588C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24AA93AC25AF0DA5007588C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +98,33 @@
 		24AA93C725AF0F0D007588C7 /* InstabugNetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugNetworkClientTests.swift; sourceTree = "<group>"; };
 		24AA93C925AF0F0D007588C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24AA93D825AF0F24007588C7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		DC1C328F285E58060013DAEC /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		DC1C3290285E58060013DAEC /* UITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		DC1C3296285E58350013DAEC /* RecordSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSceneConfigurator.swift; sourceTree = "<group>"; };
+		DC1C3297285E58350013DAEC /* RecordScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordScenePresenter.swift; sourceTree = "<group>"; };
+		DC1C3298285E58350013DAEC /* RecordSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSceneInteractor.swift; sourceTree = "<group>"; };
+		DC1C3299285E58350013DAEC /* RecordSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSceneModels.swift; sourceTree = "<group>"; };
+		DC1C329A285E58350013DAEC /* RecordSceneWorkers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSceneWorkers.swift; sourceTree = "<group>"; };
+		DC1C329B285E58360013DAEC /* RecordSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSceneRouter.swift; sourceTree = "<group>"; };
+		DC1C32A3285E58400013DAEC /* RecordSceneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordSceneViewController.xib; sourceTree = "<group>"; };
+		DC1C32A4285E58400013DAEC /* RecordSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordSceneViewController.swift; sourceTree = "<group>"; };
+		DC1C32A8285E58520013DAEC /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		DC1C32A9285E58520013DAEC /* RecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordTableViewCell.xib; sourceTree = "<group>"; };
+		DC1C32AC285E585F0013DAEC /* LandingSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingSceneRouter.swift; sourceTree = "<group>"; };
+		DC1C32AD285E585F0013DAEC /* LandingScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScenePresenter.swift; sourceTree = "<group>"; };
+		DC1C32AE285E58600013DAEC /* LandingSceneWorkers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingSceneWorkers.swift; sourceTree = "<group>"; };
+		DC1C32AF285E58600013DAEC /* LandingSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingSceneModels.swift; sourceTree = "<group>"; };
+		DC1C32B0285E58600013DAEC /* LandingSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingSceneInteractor.swift; sourceTree = "<group>"; };
+		DC1C32B1285E58600013DAEC /* LandingSceneConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingSceneConfigurator.swift; sourceTree = "<group>"; };
+		DC1C32B9285E586A0013DAEC /* LandingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		DC1C32BA285E586B0013DAEC /* LandingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandingViewController.xib; sourceTree = "<group>"; };
+		DC1C32BD285E588D0013DAEC /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		DC1C32BE285E588D0013DAEC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DC1C32C2285E58990013DAEC /* InstabugNetworkClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InstabugNetworkClient.xcdatamodel; sourceTree = "<group>"; };
+		DC1C32C4285E67770013DAEC /* InstabugNetworkClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugNetworkClientMock.swift; sourceTree = "<group>"; };
+		DC1C32C6285E67BE0013DAEC /* InstabugDataStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugDataStorageTests.swift; sourceTree = "<group>"; };
+		DC1C32CC285E7B560013DAEC /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
+		DC1C32CE285E89640013DAEC /* UIButon+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButon+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +179,8 @@
 			children = (
 				24AA939E25AF0DA4007588C7 /* AppDelegate.swift */,
 				24AA93A025AF0DA4007588C7 /* SceneDelegate.swift */,
-				24AA93A225AF0DA4007588C7 /* ViewController.swift */,
-				24AA93A425AF0DA4007588C7 /* Main.storyboard */,
+				DC1C3293285E58110013DAEC /* Modules */,
+				DC1C328E285E57FD0013DAEC /* Extensions */,
 				24AA93A725AF0DA5007588C7 /* Assets.xcassets */,
 				24AA93A925AF0DA5007588C7 /* LaunchScreen.storyboard */,
 				24AA93AC25AF0DA5007588C7 /* Info.plist */,
@@ -144,6 +194,9 @@
 				24AA93BA25AF0F0D007588C7 /* InstabugNetworkClient.h */,
 				24AA93BB25AF0F0D007588C7 /* Info.plist */,
 				24AA93D825AF0F24007588C7 /* NetworkClient.swift */,
+				DC1C32BE285E588D0013DAEC /* CoreDataStack.swift */,
+				DC1C32BD285E588D0013DAEC /* DataStorage.swift */,
+				DC1C32C1285E58990013DAEC /* InstabugNetworkClient.xcdatamodeld */,
 			);
 			path = InstabugNetworkClient;
 			sourceTree = "<group>";
@@ -152,9 +205,87 @@
 			isa = PBXGroup;
 			children = (
 				24AA93C725AF0F0D007588C7 /* InstabugNetworkClientTests.swift */,
+				DC1C32C4285E67770013DAEC /* InstabugNetworkClientMock.swift */,
+				DC1C32C6285E67BE0013DAEC /* InstabugDataStorageTests.swift */,
+				DC1C32CC285E7B560013DAEC /* TestCoreDataStack.swift */,
 				24AA93C925AF0F0D007588C7 /* Info.plist */,
 			);
 			path = InstabugNetworkClientTests;
+			sourceTree = "<group>";
+		};
+		DC1C328E285E57FD0013DAEC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C3290285E58060013DAEC /* UITableView+Extensions.swift */,
+				DC1C328F285E58060013DAEC /* UIView+Extensions.swift */,
+				DC1C32CE285E89640013DAEC /* UIButon+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DC1C3293285E58110013DAEC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C3295285E582B0013DAEC /* RecordScene */,
+				DC1C3294285E58220013DAEC /* LandingScene */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DC1C3294285E58220013DAEC /* LandingScene */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C32B8285E58620013DAEC /* Views */,
+				DC1C32B1285E58600013DAEC /* LandingSceneConfigurator.swift */,
+				DC1C32B0285E58600013DAEC /* LandingSceneInteractor.swift */,
+				DC1C32AF285E58600013DAEC /* LandingSceneModels.swift */,
+				DC1C32AD285E585F0013DAEC /* LandingScenePresenter.swift */,
+				DC1C32AC285E585F0013DAEC /* LandingSceneRouter.swift */,
+				DC1C32AE285E58600013DAEC /* LandingSceneWorkers.swift */,
+			);
+			path = LandingScene;
+			sourceTree = "<group>";
+		};
+		DC1C3295285E582B0013DAEC /* RecordScene */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C32A2285E58370013DAEC /* Views */,
+				DC1C3296285E58350013DAEC /* RecordSceneConfigurator.swift */,
+				DC1C3298285E58350013DAEC /* RecordSceneInteractor.swift */,
+				DC1C3299285E58350013DAEC /* RecordSceneModels.swift */,
+				DC1C3297285E58350013DAEC /* RecordScenePresenter.swift */,
+				DC1C329B285E58360013DAEC /* RecordSceneRouter.swift */,
+				DC1C329A285E58350013DAEC /* RecordSceneWorkers.swift */,
+			);
+			path = RecordScene;
+			sourceTree = "<group>";
+		};
+		DC1C32A2285E58370013DAEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C32A7285E58430013DAEC /* RecordTableViewCell */,
+				DC1C32A4285E58400013DAEC /* RecordSceneViewController.swift */,
+				DC1C32A3285E58400013DAEC /* RecordSceneViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC1C32A7285E58430013DAEC /* RecordTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C32A8285E58520013DAEC /* RecordTableViewCell.swift */,
+				DC1C32A9285E58520013DAEC /* RecordTableViewCell.xib */,
+			);
+			path = RecordTableViewCell;
+			sourceTree = "<group>";
+		};
+		DC1C32B8285E58620013DAEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC1C32B9285E586A0013DAEC /* LandingViewController.swift */,
+				DC1C32BA285E586B0013DAEC /* LandingViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +405,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1C32BC285E586B0013DAEC /* LandingViewController.xib in Resources */,
 				24AA93AB25AF0DA5007588C7 /* LaunchScreen.storyboard in Resources */,
+				DC1C32A5285E58400013DAEC /* RecordSceneViewController.xib in Resources */,
+				DC1C32AB285E58520013DAEC /* RecordTableViewCell.xib in Resources */,
 				24AA93A825AF0DA5007588C7 /* Assets.xcassets in Resources */,
-				24AA93A625AF0DA4007588C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,9 +434,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24AA93A325AF0DA4007588C7 /* ViewController.swift in Sources */,
+				DC1C3291285E58060013DAEC /* UIView+Extensions.swift in Sources */,
+				DC1C32A0285E58360013DAEC /* RecordSceneWorkers.swift in Sources */,
+				DC1C32B5285E58600013DAEC /* LandingSceneModels.swift in Sources */,
+				DC1C32AA285E58520013DAEC /* RecordTableViewCell.swift in Sources */,
+				DC1C329C285E58360013DAEC /* RecordSceneConfigurator.swift in Sources */,
+				DC1C329D285E58360013DAEC /* RecordScenePresenter.swift in Sources */,
+				DC1C32B4285E58600013DAEC /* LandingSceneWorkers.swift in Sources */,
+				DC1C32A1285E58360013DAEC /* RecordSceneRouter.swift in Sources */,
+				DC1C32CF285E89640013DAEC /* UIButon+Extensions.swift in Sources */,
+				DC1C32B6285E58600013DAEC /* LandingSceneInteractor.swift in Sources */,
+				DC1C329F285E58360013DAEC /* RecordSceneModels.swift in Sources */,
+				DC1C32B3285E58600013DAEC /* LandingScenePresenter.swift in Sources */,
 				24AA939F25AF0DA4007588C7 /* AppDelegate.swift in Sources */,
+				DC1C32BB285E586B0013DAEC /* LandingViewController.swift in Sources */,
+				DC1C32A6285E58400013DAEC /* RecordSceneViewController.swift in Sources */,
 				24AA93A125AF0DA4007588C7 /* SceneDelegate.swift in Sources */,
+				DC1C32B2285E58600013DAEC /* LandingSceneRouter.swift in Sources */,
+				DC1C32B7285E58600013DAEC /* LandingSceneConfigurator.swift in Sources */,
+				DC1C329E285E58360013DAEC /* RecordSceneInteractor.swift in Sources */,
+				DC1C3292285E58060013DAEC /* UITableView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +461,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1C32C3285E58990013DAEC /* InstabugNetworkClient.xcdatamodeld in Sources */,
+				DC1C32C0285E588D0013DAEC /* CoreDataStack.swift in Sources */,
 				24AA93D925AF0F24007588C7 /* NetworkClient.swift in Sources */,
+				DC1C32BF285E588D0013DAEC /* DataStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +472,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1C32C5285E67770013DAEC /* InstabugNetworkClientMock.swift in Sources */,
 				24AA93C825AF0F0D007588C7 /* InstabugNetworkClientTests.swift in Sources */,
+				DC1C32C7285E67BE0013DAEC /* InstabugDataStorageTests.swift in Sources */,
+				DC1C32CD285E7B560013DAEC /* TestCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +500,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		24AA93A425AF0DA4007588C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24AA93A525AF0DA4007588C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		24AA93A925AF0DA5007588C7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -527,6 +675,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = InstabugNetworkClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -534,6 +683,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Instabug.InstabugNetworkClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -555,6 +705,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				INFOPLIST_FILE = InstabugNetworkClient/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -562,6 +713,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Instabug.InstabugNetworkClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -650,6 +802,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC1C32C1285E58990013DAEC /* InstabugNetworkClient.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC1C32C2285E58990013DAEC /* InstabugNetworkClient.xcdatamodel */,
+			);
+			currentVersion = DC1C32C2285E58990013DAEC /* InstabugNetworkClient.xcdatamodel */;
+			path = InstabugNetworkClient.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24AA939325AF0DA4007588C7 /* Project object */;
 }

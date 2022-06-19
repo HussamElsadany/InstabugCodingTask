@@ -8,33 +8,44 @@
 import Foundation
 import CoreData
 
-fileprivate let MaxRequestsCount = 4
+fileprivate let MaxRequestsCount = 1000
+fileprivate let MaxPayloadSize = 1000000 // in bytes
 
-protocol DataStorageLogic: AnyObject {
+protocol DataStorageProtocol: AnyObject {
     func saveNewRequest(_ request: URLRequest, _ response: URLResponse?, _ data: Data?, _ error: Error?)
     func getAllRequests(_ completionHandler: @escaping (([RequestModel]) -> Void))
     func removeAllRequests()
+    func checkLimitRecorded(requests: [RequestModel], maxLimit: Int) -> Bool
 }
 
 class DataStorage {
-    init () {
+
+    let coreDataStack: CoreDataStack
+    
+    private let semaphore = DispatchSemaphore(value: 1)
+
+    init (coreDataStack: CoreDataStack) {
+        self.coreDataStack = CoreDataStack()
         removeAllRequests()
     }
-    private let semaphore = DispatchSemaphore(value: 1)
 }
 
-extension DataStorage: DataStorageLogic {
+extension DataStorage: DataStorageProtocol {
 
     func saveNewRequest(_ request: URLRequest, _ response: URLResponse?, _ data: Data?, _ error: Error?) {
 
-        CoreDataStack.shared.performBackgroundTask { context in
+        coreDataStack.performBackgroundTask { context in
             self.semaphore.wait()
-            self.checkForMaxSavedItems(context: context)
+
+            let allRequests = try! context.fetch(RequestModel.fetchRequest())
+            if self.checkLimitRecorded(requests: allRequests, maxLimit: MaxRequestsCount) {
+                self.deleteFirstItem(allRequests: allRequests, context: context)
+            }
 
             let newRequest = RequestModel(context: context)
             newRequest.url = request.url?.absoluteString
             newRequest.method = request.httpMethod
-            newRequest.payload = request.httpBody
+            newRequest.payload = self.checkDataSizeLimit(data: request.httpBody)
             newRequest.response = self.generateResponse(response: response,
                                                         data: data,
                                                         error: error,
@@ -45,7 +56,7 @@ extension DataStorage: DataStorageLogic {
     }
 
     func getAllRequests(_ completionHandler: @escaping (([RequestModel]) -> Void)) {
-        CoreDataStack.shared.performBackgroundTask { context in
+        coreDataStack.performBackgroundTask { context in
             self.semaphore.wait()
             let allRequests = try! context.fetch(RequestModel.fetchRequest())
             completionHandler(allRequests)
@@ -54,7 +65,7 @@ extension DataStorage: DataStorageLogic {
     }
 
     func removeAllRequests() {
-        CoreDataStack.shared.performBackgroundTask { context in
+        coreDataStack.performBackgroundTask { context in
             self.semaphore.wait()
             let allRequests = try! context.fetch(RequestModel.fetchRequest())
             for request in allRequests {
@@ -63,6 +74,10 @@ extension DataStorage: DataStorageLogic {
             self.saveData(context: context)
             self.semaphore.signal()
         }
+    }
+
+    func checkLimitRecorded(requests: [RequestModel], maxLimit: Int) -> Bool {
+        return requests.count == maxLimit
     }
 }
 
@@ -93,7 +108,7 @@ private extension DataStorage {
     func generateSuccess(data: Data, statusCode: Int, context: NSManagedObjectContext) -> SuccessModel {
         let newSuccess = SuccessModel(context: context)
         newSuccess.code = Int64(statusCode)
-        newSuccess.payload = data
+        newSuccess.payload = checkDataSizeLimit(data: data)
         return newSuccess
     }
 
@@ -103,14 +118,23 @@ private extension DataStorage {
         }
     }
 
-    func checkForMaxSavedItems(context: NSManagedObjectContext) {
-        getAllRequests { requests in
-            if requests.count == MaxRequestsCount {
-                if let request = requests.first {
-                    context.delete(request)
-                }
-            }
+    func deleteFirstItem(allRequests: [RequestModel], context: NSManagedObjectContext) {
+        if let request = allRequests.first {
+            context.delete(request)
             self.saveData(context: context)
         }
+    }
+
+    func checkDataSizeLimit(data: Data?) -> Data? {
+        guard let data = data else {
+            return nil
+        }
+
+        if data.count > MaxPayloadSize {
+            let string = "payload too large"
+            return string.data(using: .utf8)
+        }
+
+        return data
     }
 }

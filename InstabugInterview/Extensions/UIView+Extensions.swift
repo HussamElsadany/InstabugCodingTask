@@ -36,3 +36,20 @@ import UIKit
         }
     }
 }
+
+extension UIView {
+
+    func pinItemToEdges(item: UIView, constants: [CGFloat] = [0, 0, 0, 0]) {
+        item.translatesAutoresizingMaskIntoConstraints = false
+        let attributes: [NSLayoutConstraint.Attribute] = [.top, .trailing, .bottom, .leading]
+        activateLayoutAttributes(attributes, for: item, constants: constants)
+    }
+
+    func activateLayoutAttributes(_ attributes: [NSLayoutConstraint.Attribute], for item: UIView, constants: [CGFloat] = [0, 0, 0, 0]) {
+        var index = -1
+        NSLayoutConstraint.activate(attributes.map {
+            index += 1
+            return NSLayoutConstraint(item: item, attribute: $0, relatedBy: .equal, toItem: self, attribute: $0, multiplier: 1, constant: constants[index])
+        })
+    }
+}

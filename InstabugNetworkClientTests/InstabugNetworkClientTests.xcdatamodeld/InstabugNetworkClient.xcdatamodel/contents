@@ -5,15 +5,9 @@
         <attribute name="domain" optional="YES" attributeType="String"/>
         <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseModel"/>
     </entity>
-    <entity name="RequestModel" representedClassName=".RequestModel" syncable="YES" codeGenerationType="class">
-        <attribute name="method" optional="YES" attributeType="String"/>
-        <attribute name="payload" optional="YES" attributeType="Binary"/>
-        <attribute name="url" optional="YES" attributeType="String"/>
-        <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseModel"/>
-    </entity>
     <entity name="ResponseModel" representedClassName=".ResponseModel" syncable="YES" codeGenerationType="class">
         <relationship name="error" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ErrorModel"/>
-        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RequestModel"/>
+        <relationship name="request" optional="YES" maxCount="1" deletionRule="Nullify"/>
         <relationship name="success" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SuccessModel"/>
     </entity>
     <entity name="SuccessModel" representedClassName=".SuccessModel" syncable="YES" codeGenerationType="class">
@@ -22,9 +16,8 @@
         <relationship name="response" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResponseModel"/>
     </entity>
     <elements>
-        <element name="RequestModel" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="ErrorModel" positionX="-27" positionY="72" width="128" height="74"/>
         <element name="ResponseModel" positionX="-54" positionY="18" width="128" height="74"/>
         <element name="SuccessModel" positionX="-36" positionY="63" width="128" height="74"/>
-        <element name="ErrorModel" positionX="-27" positionY="72" width="128" height="74"/>
     </elements>
 </model>

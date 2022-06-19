@@ -53,9 +53,22 @@ private extension RecordScenePresenter {
             desc = String(format: "%i %@", request.response?.error?.code ?? 0, request.response?.error?.domain ?? "")
         }
 
+        var requestData: String?
+        var responseData: String?
+
+        if let data = request.payload {
+            requestData = String(format: "Request Data Size: %d", data.count)
+        }
+
+        if let data = request.response?.success?.payload {
+            responseData = String(format: "Response Data Size: %d", data.count)
+        }
+
         return RecordScene.Request.Request(status: requestStatus,
                                            url: request.url ?? "",
                                            desc: desc,
-                                           method: request.method ?? "")
+                                           method: request.method ?? "",
+                                           requestData: requestData,
+                                           responseData: responseData)
     }
 }

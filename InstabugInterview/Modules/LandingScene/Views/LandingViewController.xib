@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LandingViewController" customModule="InstabugInterview" customModuleProvider="target">
             <connections>
+                <outlet property="randomRequestButton" destination="qIW-ou-A8n" id="fX7-OJ-sXs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,49 +20,69 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jam-Mw-hr9">
-                    <rect key="frame" x="20" y="64" width="374" height="778"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="jam-Mw-hr9">
+                    <rect key="frame" x="20" y="303" width="374" height="300"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPT-cg-U2D">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="259.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="84"/>
                             <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="automatic">
+                            <buttonConfiguration key="configuration" style="plain" title="View All Requests" titleAlignment="automatic">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="checkRecordedSession:" destination="-1" eventType="touchUpInside" id="iT3-Cg-xCb"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHZ-vo-QiK">
-                            <rect key="frame" x="0.0" y="259.5" width="374" height="259"/>
+                            <rect key="frame" x="0.0" y="108" width="374" height="84"/>
                             <color key="backgroundColor" systemColor="systemTealColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="automatic">
+                            <buttonConfiguration key="configuration" style="plain" title="Send Single Request" titleAlignment="automatic">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
-                                <action selector="sendNewRequest:" destination="-1" eventType="touchUpInside" id="YrI-uT-8zH"/>
+                                <action selector="sendSingleRequest:" destination="-1" eventType="touchUpInside" id="i8e-NR-cJD"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-ou-A8n">
-                            <rect key="frame" x="0.0" y="518.5" width="374" height="259.5"/>
+                            <rect key="frame" x="0.0" y="216" width="374" height="84"/>
                             <color key="backgroundColor" systemColor="systemYellowColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button" titleAlignment="automatic">
+                            <buttonConfiguration key="configuration" style="plain" title="Send Random Requests" titleAlignment="automatic">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sendRandomRequests:" destination="-1" eventType="touchUpInside" id="zZM-BD-57I"/>
+                            </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="YwW-gz-fvq"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jam-Mw-hr9" secondAttribute="trailing" constant="20" id="4gC-MR-ZUS"/>
-                <constraint firstItem="jam-Mw-hr9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Gla-9t-vLW"/>
+                <constraint firstItem="jam-Mw-hr9" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Gic-jr-EDS"/>
                 <constraint firstItem="jam-Mw-hr9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cUx-zH-500"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jam-Mw-hr9" secondAttribute="bottom" constant="20" id="hkY-bA-iXK"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="34.821428571428569"/>
         </view>

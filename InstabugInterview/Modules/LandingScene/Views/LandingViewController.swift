@@ -9,7 +9,7 @@ import UIKit
 import InstabugNetworkClient
 
 protocol LandingSceneDisplayView: AnyObject {
-
+    func displayFinishRequests()
 }
 
 class LandingViewController: UIViewController {
@@ -19,6 +19,8 @@ class LandingViewController: UIViewController {
     var viewStore: LandingSceneViewStore!
     var router: LandingSceneRoutingLogic!
 
+    @IBOutlet private weak var randomRequestButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,18 +29,19 @@ class LandingViewController: UIViewController {
         router.routeToRecordScene()
     }
 
-    @IBAction func sendNewRequest(_ sender: Any) {
-        guard let url = URL(string: "https://httpbin.org/anything") else {
-            return
-        }
+    @IBAction func sendSingleRequest(_ sender: Any) {
+        interactor.sendSingleRequest()
+    }
 
-        NetworkClient.shared.get(url) { data in
-            print(data)
-        }
-
+    @IBAction func sendRandomRequests(_ sender: Any) {
+        randomRequestButton.startLoading()
+        interactor.sendRandomRequests()
     }
 }
 
 extension LandingViewController: LandingSceneDisplayView {
 
+    func displayFinishRequests() {
+        randomRequestButton.stopLoading()
+    }
 }

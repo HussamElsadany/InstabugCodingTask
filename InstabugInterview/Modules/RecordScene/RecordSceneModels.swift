@@ -21,6 +21,8 @@ extension RecordScene.Request {
         let url: String
         let desc: String
         let method: String
+        let requestData: String?
+        let responseData: String?
     }
 
     struct ViewModel {

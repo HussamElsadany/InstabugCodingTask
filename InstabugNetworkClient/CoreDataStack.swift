@@ -12,14 +12,14 @@ fileprivate let DataStorgeName = "InstabugNetworkClient"
 final class PersistentContainer: NSPersistentContainer { }
 
 class CoreDataStack {
-    static let shared = CoreDataStack()
-    private var persistentContainer: NSPersistentContainer!
+    
+    public var persistentContainer: NSPersistentContainer!
 
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
 
-    private init() {
+    init() {
         prepare()
     }
 

@@ -6,7 +6,7 @@
 //
 
 protocol LandingScenePresentationLogic: AnyObject {
-
+    func presentStopLoading()
 }
 
 protocol LandingSceneViewStore: AnyObject {
@@ -26,4 +26,7 @@ class LandingScenePresenter: LandingScenePresentationLogic, LandingSceneViewStor
 
 extension LandingScenePresenter {
 
+    func presentStopLoading() {
+        displayView?.displayFinishRequests()
+    }
 }
